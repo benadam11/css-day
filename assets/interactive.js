@@ -21,7 +21,7 @@ export default class Interactive extends Component {
       minWidth: 300,
       marginTop: 20,
       textTransform: "uppercase",
-      border: "none",
+      border: "1px solid #F81CE5",
       color: "white",
       outline: "none",
       fontWeight: "bold",
@@ -31,7 +31,7 @@ export default class Interactive extends Component {
       <div>
       {this.state.count < 5 ?
         <div>
-          <Heading size={5} textColor="black">
+          <Heading size={5} textColor="secondary">
             The button has been clicked {this.state.count} times
           </Heading>
           <button style={styles} type="button" onClick={this.handleClick}>Click Me</button>
