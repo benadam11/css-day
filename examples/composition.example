@@ -1,0 +1,16 @@
+
+/*
+  Composition is taking simple functions and combining them into more complicated ones, 
+  by taking the return value from the first function, and passing it to the second function. 
+*/
+
+const double = (x) => x + x;
+
+const square = (x) => x * x;
+
+const compose = (f, g) => (x) => f(g(x));
+
+const squareAndDouble = compose(double,square);
+
+console.log(squareAndDouble(2)); // 8 
+

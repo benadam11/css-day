@@ -1,0 +1,11 @@
+
+/*
+  A function is pure if given the same inputs, it always returns the same output.
+*/ 
+
+const f = (x) => x + 1;
+
+f(1); // 2
+
+f(3); // 4
+

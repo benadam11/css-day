@@ -1,0 +1,12 @@
+
+// Common Semantic Class Name
+
+.card {
+  border: 1px solid red;
+  border-radius: 8px;
+  background-color: white;
+  padding: 40px;
+}
+
+<div class='card'></div>
+
