@@ -45,6 +45,7 @@ const images = {
   lego: require("../assets/lego-castle.png"),
   specificity: require("../assets/twitter-specificity.png"),
   stats: require("../assets/twitter-stats.png"),
+  cats: require("../assets/cats.png"),
   weave: require("../assets/woven-castle.png"),
   markdown: require("../assets/markdown.png")
 };
@@ -135,23 +136,23 @@ export default class Presentation extends React.Component {
                 <Fill><Image src={images.weave} height="300px"/></Fill>
                 <Fill><Image src={images.lego} height="300px"/></Fill>
               </Layout>
-              <Text textColor='white' textSize='24px' italic>Which castle would you rather refactor?</Text>
+              <Text textColor='white' textSize='24px' italic>Simple vs Complex</Text>
+            </Slide>
+
+            <Slide transition={['slide']} bgColor="black">
+                <Heading textAlign='left' size={6} textColor='secondary' italic >How does CSS become complex?</Heading>
+                <List textColor='white'>
+                  <Appear><ListItem textSize='28px' margin='20px 0px'>Over time the codebase and / or team grows</ListItem></Appear>
+                  <Appear><ListItem textSize='28px' margin='20px 0px'>Developer isn't aware than someone already wrote a class</ListItem></Appear>
+                  <Appear><ListItem textSize='28px' margin='20px 0px'>The existing class doesn’t do exactly what they need it to</ListItem></Appear>
+                  <Appear><ListItem textSize='28px'>Solution: Add more CSS</ListItem></Appear>
+              </List>
             </Slide>
 
             <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
               <Heading size={6}textAlign='center' textColor='white' lineHeight={2} bold italic>
                 It is much easier to write new CSS than it is to delete or refactor existing CSS.
               </Heading>
-            </Slide>
-
-            <Slide transition={['slide']} bgColor="black">
-                <Heading textAlign='left' size={6} textColor='secondary' italic >How does this happen?</Heading>
-                <List textColor='white'>
-                  <Appear><ListItem textSize='28px' margin='20px 0px'>Over time the codebase and / or team grows</ListItem></Appear>
-                  <Appear><ListItem textSize='28px' margin='20px 0px'>Developer aware than someone already wrote a class</ListItem></Appear>
-                  <Appear><ListItem textSize='28px' margin='20px 0px'>The existing class doesn’t do exactly what they need it to</ListItem></Appear>
-                  <Appear><ListItem textSize='28px'>Solution: Add more CSS</ListItem></Appear>
-              </List>
             </Slide>
 
 
@@ -289,6 +290,12 @@ export default class Presentation extends React.Component {
               </Heading>
             </Slide>
 
+            <Slide transition={['slide']} bgColor="black">
+              <Heading size={6} lineHeight={1.5} textColor='white' italic >
+                What if CSS properties were immutable? 
+              </Heading>
+            </Slide>
+
             <Slide transition={['fade', 'zoom']} bgColor="white">
               <Heading size={6} textColor="black" textAlign='left' margin='80px 0px' italic>
                 CSS Stats for Twitter.com
@@ -309,14 +316,15 @@ export default class Presentation extends React.Component {
               </Heading>
               <List textColor='white'>
                 <Appear><ListItem textSize='28px' margin='20px 0px'>Keep specificity flat by only using classes</ListItem></Appear>
+                <Appear><ListItem textSize='28px' margin='20px 0px'>Avoid IDs, element, attribute and complex selectors</ListItem></Appear>
                 <Appear><ListItem textSize='28px' margin='20px 0px'>Avoid inheritance and the cascade</ListItem></Appear>
-                <Appear><ListItem textSize='28px' margin='20px 0px'>Avoid property duplication across classes</ListItem></Appear>
+                <Appear><ListItem textSize='28px' margin='20px 0px'>Avoid property duplication with single property utility classes</ListItem></Appear>
               </List>
             </Slide>
 
-            <Slide transition={['slide']} bgColor="black">
-              <Heading size={6} textColor="secondary" margin='40px 10px'>
-                Principle 3 - Composition
+            <Slide transition={['slide']} bgColor="secondary">
+              <Heading size={6} lineHeight={1.5} textColor='white' italic >
+                The more properties your CSS declaration has, the less reusable it is.
               </Heading>
             </Slide>
 
@@ -326,15 +334,22 @@ export default class Presentation extends React.Component {
                 source={require("raw!../examples/css-composition.example")}
                 margin="20px auto"
               />
-              <Appear>
+            </Slide>
+
+            <Slide transition={['zoom','fade']} bgColor="primary">
                 <CodePane
                   lang="jsx"
                   source={require("raw!../examples/css-composition2.example")}
                   margin="20px auto"
                 />
-              </Appear>
             </Slide>
 
+            <Slide transition={['slide']} bgColor="black">
+              <Heading size={6} textColor="secondary" margin='40px 10px'>
+                Principle 3 - Composition
+              </Heading>
+            </Slide>
+            
             <Slide transition={['zoom','fade']} bgColor="primary">
               <CodePane
                 lang="jsx"
@@ -343,11 +358,79 @@ export default class Presentation extends React.Component {
               />
             </Slide>
 
+            <Slide transition={['slide']} bgColor="black" notes='Highly recommend the Lee Byron talk on immutability'>
+              <Heading size={6} textColor='secondary' textAlign='left' italic>
+                Benefits of FCSS 
+              </Heading>
+              <List textColor='white'>
+                <Appear><ListItem textSize='28px' margin='20px 0px'>Perfomance</ListItem></Appear>
+                <Appear><ListItem textSize='28px' margin='20px 0px'>Consistency</ListItem></Appear>
+                <Appear><ListItem textSize='28px' margin='20px 0px'>Less context switching</ListItem></Appear>
+                <Appear><ListItem textSize='28px' margin='20px 0px'>Reduces cognitive overload </ListItem></Appear>
+                <Appear><ListItem textSize='28px' margin='20px 0px'>Reduces the cost of design changes</ListItem></Appear>
+              </List>
+            </Slide>
+
+            <Slide transition={['slide']} bgColor="secondary">
+              <Heading size={6} textColor='white' italic >FAQ / Examples</Heading>
+            </Slide>
+
+            <Slide transition={['zoom','fade']} bgColor="primary">
+              <CodePane
+                lang="jsx"
+                source={require("raw!../examples/last-child.example")}
+                margin="20px auto"
+              />
+            </Slide>
+
+            <Slide transition={['slide']} bgColor="white">
+              <Image src={images.cats} margin="0px auto 40px" height="400px"/>
+            </Slide>
+
+            <Slide transition={['zoom','fade']} bgColor="primary">
+              <CodePane
+                lang="jsx"
+                source={require("raw!../examples/first-child.example")}
+                margin="20px auto"
+              />
+            </Slide>
+
+            <Slide transition={['zoom','fade']} bgColor="primary">
+              <CodePane
+                lang="jsx"
+                source={require("raw!../examples/state-toggle.example")}
+                margin="20px auto"
+              />
+            </Slide>
+            
+
+            <Slide transition={['slide']} bgColor="black">
+              <Heading size={6} textColor='secondary' textAlign='left' italic >
+                Resources / Further Reading: 
+              </Heading>
+              <List >
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='https://www.infoq.com/presentations/Simple-Made-Easy' textColor='white'>Simple Made Easy by Rich Hickey</Link>
+                </ListItem>
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='http://mrmrs.io/writing/2016/03/24/scalable-css/' textColor='white'>Scalable CSS</Link>
+                </ListItem>
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='https://blog.colepeters.com/building-and-shipping-functional-css/' textColor='white'>Building & Shipping Functional CSS</Link>
+                </ListItem>
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='https://github.com/tachyons-css/tachyons' textColor='white'>Tachyons</Link>
+                </ListItem>
+              </List>
+            </Slide>
+
+
+
             <Slide transition={["spin", "slide"]} bgColor="tertiary">
               <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
                Thank you!
               </Heading>
-              <Link href="http://www.twitter.com/benadam11" textColor='secondary'>@benadam11</Link>
+              <Text>(Say hi on twitter) - <Link href="http://www.twitter.com/benadam11" textColor='secondary'>@benadam11</Link></Text>
             </Slide>
 
           </Deck>

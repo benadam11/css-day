@@ -3,7 +3,7 @@ import React from 'react';
 
 const Card = ({ children }) => {
   return (
-    <div class='b-solid b-sz-xsmall b-c-red b-r-medium bg-c-white p-medium'>
+    <div className='b-solid b-sz-xsmall b-c-red b-r-medium bg-c-white p-medium'>
       { children }
     </div>
   );
