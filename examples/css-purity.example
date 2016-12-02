@@ -1,4 +1,6 @@
 
+// What color is the H2?
+
 <style>
   .blue > h2 { color: blue; }
   .red { color: red; }

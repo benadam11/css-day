@@ -250,6 +250,12 @@ export default class Presentation extends React.Component {
               </Heading>
             </Slide>
 
+            <Slide transition={["fade"]} bgColor="white">
+              <Heading size={6} lineHeight={1.25}>
+                A function is pure if given the same inputs, it always returns the same output.
+              </Heading>
+            </Slide>
+
             <Slide transition={['zoom','fade']} bgColor="primary">
               <CodePane
                 lang="jsx"
@@ -288,7 +294,7 @@ export default class Presentation extends React.Component {
 
             <Slide transition={['slide']} bgColor="black" notes='Highly recommend the Lee Byron talk on immutability'>
               <Heading size={6} textColor='secondary' textAlign='left' italic >
-                Immutability is a virtuous constraint
+                Immutability is a (virtuous) constraint
               </Heading>
               <List textColor='white'>
                 <Appear><ListItem textSize='28px' margin='20px 0px'>Cheap equality checks on data</ListItem></Appear>
@@ -300,6 +306,12 @@ export default class Presentation extends React.Component {
             <Slide transition={['slide']} bgColor="black">
               <Heading size={6} textColor="secondary" margin='40px 10px'>
                 Principle 3 - Composition
+              </Heading>
+            </Slide>
+
+            <Slide transition={["fade"]} bgColor="white">
+              <Heading size={6} lineHeight={1.25}>
+                Composition is combining simple functions to form a new more powerful function.
               </Heading>
             </Slide>
 
@@ -331,6 +343,12 @@ export default class Presentation extends React.Component {
               />
             </Slide>
 
+            <Slide transition={["fade"]} bgColor="white">
+              <Heading size={6} lineHeight={1.25}>
+                Our CSS is "pure" if only the classes declared on the element apply styles to it.
+              </Heading>
+            </Slide>
+
             <Slide transition={['slide']} bgColor="black">
               <Heading size={6} textColor="secondary" margin='40px 10px'>
                 Principle 2 - Immutability
@@ -339,7 +357,7 @@ export default class Presentation extends React.Component {
 
             <Slide transition={['slide']} bgColor="black">
               <Heading size={6} lineHeight={1.5} textColor='white' italic >
-                What if CSS properties were immutable?
+                If CSS were immutable, we wouldn't be able override properties.
               </Heading>
             </Slide>
 
@@ -353,12 +371,6 @@ export default class Presentation extends React.Component {
                 <Appear><ListItem textSize='28px' margin='20px 0px'>Avoid inheritance and the cascade</ListItem></Appear>
                 <Appear><ListItem textSize='28px' margin='20px 0px'>Avoid property duplication with single property utility classes</ListItem></Appear>
               </List>
-            </Slide>
-
-            <Slide transition={['slide']} bgColor="secondary">
-              <Heading size={6} lineHeight={1.5} textColor='white' italic >
-                The more properties your CSS declaration has, the less reusable it is.
-              </Heading>
             </Slide>
 
             <Slide transition={['zoom','fade']} bgColor="primary">
@@ -375,6 +387,12 @@ export default class Presentation extends React.Component {
                   source={require("raw!../examples/css-composition2.example")}
                   margin="20px auto"
                 />
+            </Slide>
+
+            <Slide transition={['slide']} bgColor="secondary">
+              <Heading size={6} lineHeight={1.5} textColor='white' italic >
+                The more properties your CSS declaration has, the less reusable it is.
+              </Heading>
             </Slide>
 
             <Slide transition={['slide']} bgColor="black">
@@ -465,6 +483,33 @@ export default class Presentation extends React.Component {
               </Appear>
             </Slide>
 
+            <Slide transition={['slide']} bgColor="black">
+              <Heading size={6} textColor='secondary' textAlign='left' italic >
+                Resources / Further Reading:
+              </Heading>
+              <List >
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='https://www.infoq.com/presentations/Simple-Made-Easy' textColor='white'>Simple Made Easy by Rich Hickey</Link>
+                </ListItem>
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='http://mrmrs.io/writing/2016/03/24/scalable-css/' textColor='white'>Scalable CSS</Link>
+                </ListItem>
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='https://blog.colepeters.com/building-and-shipping-functional-css/' textColor='white'>Building & Shipping Functional CSS</Link>
+                </ListItem>
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='https://github.com/tachyons-css/tachyons' textColor='white'>Tachyons</Link>
+                </ListItem>
+              </List>
+            </Slide>
+
+            <Slide transition={["spin", "slide"]} bgColor="tertiary">
+              <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
+               Thank you!
+              </Heading>
+              <Text>(Say hi on twitter) - <Link href="http://www.twitter.com/benadam11" textColor='secondary'>@benadam11</Link></Text>
+            </Slide>
+
             <Slide transition={["fade"]} bgColor="white">
               <Heading size={6} textAlign='left' italic bold margin='40px 0px'>
                 Q: How do you do :nth-child selection, hovers and active states?
@@ -518,34 +563,6 @@ export default class Presentation extends React.Component {
             </Slide>
 
             <Slide> <Interactive/> </Slide>
-
-
-            <Slide transition={['slide']} bgColor="black">
-              <Heading size={6} textColor='secondary' textAlign='left' italic >
-                Resources / Further Reading:
-              </Heading>
-              <List >
-                <ListItem textSize='28px' margin='20px 0px'>
-                  <Link href='https://www.infoq.com/presentations/Simple-Made-Easy' textColor='white'>Simple Made Easy by Rich Hickey</Link>
-                </ListItem>
-                <ListItem textSize='28px' margin='20px 0px'>
-                  <Link href='http://mrmrs.io/writing/2016/03/24/scalable-css/' textColor='white'>Scalable CSS</Link>
-                </ListItem>
-                <ListItem textSize='28px' margin='20px 0px'>
-                  <Link href='https://blog.colepeters.com/building-and-shipping-functional-css/' textColor='white'>Building & Shipping Functional CSS</Link>
-                </ListItem>
-                <ListItem textSize='28px' margin='20px 0px'>
-                  <Link href='https://github.com/tachyons-css/tachyons' textColor='white'>Tachyons</Link>
-                </ListItem>
-              </List>
-            </Slide>
-
-            <Slide transition={["spin", "slide"]} bgColor="tertiary">
-              <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-               Thank you!
-              </Heading>
-              <Text>(Say hi on twitter) - <Link href="http://www.twitter.com/benadam11" textColor='secondary'>@benadam11</Link></Text>
-            </Slide>
 
           </Deck>
         </Spectacle>
