@@ -1,24 +1,15 @@
 
 /*
-  In FP data should not be directly manipulated. 
-  Instead, you copy the data structure and then apply your transformation. 
-*/ 
+  In FP data should not be directly manipulated.
+  Instead, you copy the data structure and then apply your transformation.
+*/
 
 var arr = [1,2,3,4];
 
-// concat creates a copy of arr and then assigns it
+// Push modifies array directly (not immutable)
+arr.push(5);
 
+// Concat creates a copy of the array and then assigns it
 const newArr = arr.concat([5]);
 
-console.log(arr) // [1,2,3,4]
-
-console.log(newArr); // [1,2,3,4,5]
-
-console.log(arr); // [1,2,3,4]
-
-// Push modifies arr directly 
-arr.push(5);  
-
-// Now calling the same function, with the same inputs, returns a different result
-console.log(arr); // [1,2,3,4,5]
-
+// Javascript doesn't enforce immutability so its treated as a best practice

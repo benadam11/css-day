@@ -1,10 +1,9 @@
-return (
-  <style>
-    .blue > h2  { color: blue; }
-    .red { color: red; }
-  </style>
 
-  <div class='blue'>
-    <h2 class='red'>Hello World</h2>
-  </div>
-)
+<style>
+  .blue > h2 { color: blue; }
+  .red { color: red; }
+</style>
+
+<div class='blue'>
+  <h2 class='red'>Hello World</h2>
+</div>

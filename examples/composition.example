@@ -8,9 +8,7 @@ const double = (x) => x + x;
 
 const square = (x) => x * x;
 
-const compose = (f, g) => (x) => f(g(x));
+// Compose these functions together
 
-const squareAndDouble = compose(double,square);
-
-console.log(squareAndDouble(2)); // 8 
+console.log(double(square(2))); // 8 
 

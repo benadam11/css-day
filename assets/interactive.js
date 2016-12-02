@@ -1,44 +1,29 @@
-import React, { Component } from "react";
-import { Heading } from "spectacle";
+import React, {Component} from 'react';
 
-export default class Interactive extends Component {
-  constructor() {
+export default class Toggle extends Component {
+  constructor(){
     super();
-    this.state = {
-      count: 0
-    };
-    this.handleClick = this.handleClick.bind(this);
+    this.state = { showArticle: true };
   }
-  handleClick() {
-    this.setState({
-      count: this.state.count + 1
-    });
-  }
-  render() {
-    const styles = {
-      padding: 20,
-      background: "black",
-      minWidth: 300,
-      marginTop: 20,
-      textTransform: "uppercase",
-      border: "1px solid #F81CE5",
-      color: "white",
-      outline: "none",
-      fontWeight: "bold",
-      fontSize: "2em"
-    };
+
+  render(){
+    const { showArticle } = this.state;
+    const classes = showArticle ? 'db' : 'dn';
     return (
       <div>
-      {this.state.count < 5 ?
-        <div>
-          <Heading size={5} textColor="secondary">
-            The button has been clicked {this.state.count} times
-          </Heading>
-          <button style={styles} type="button" onClick={this.handleClick}>Click Me</button>
-        </div> :
-          <Heading size={5} fit caps textColor="black">Easy there pal</Heading>
-        }
+        <article className={`pa3 pa5-ns ${classes}`}>
+          <h1>Title</h1>
+          <p className="measure lh-copy">
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+          </p>
+        </article>
+        <button 
+          onClick={()=>{ this.setState({ showArticle: !showArticle})}}
+          style={{padding: '10px 40px', fontSize: '18px', borderRadius: '4px'}}> 
+          Toggle
+        </button>
       </div>
-    );
+    )
   }
 }
