@@ -96,12 +96,12 @@ export default class Presentation extends React.Component {
 
             <Slide transition={['slide']} bgColor="black">
               <Image src={images.cage} margin="0px auto 40px" height="500px"/>
-              <Text textColor='white' textSize='24px' italic >How I hope you will be feeling after my talk.</Text>
+              <Text textColor='white' textSize='24px' italic >How some of you feel about CSS.</Text>
             </Slide>
 
             <Slide transition={['slide']} bgColor="black">
               <Image src={images.shady} margin="0px auto 40px" height="500px"/>
-              <Text textColor='white' textSize='24px' italic>Equally possible outcome...</Text>
+              <Text textColor='white' textSize='24px' italic>And the rest of you ...</Text>
             </Slide>
 
             <Slide transition={['slide']} bgColor="secondary">
@@ -128,7 +128,7 @@ export default class Presentation extends React.Component {
 
             <Slide transition={['slide']} bgColor="secondary">
               <Heading size={6} lineHeight={1.5} textColor='white' italic >
-                If we can solve developer experience problems, we can focus more time and effort building great products.
+                If we solve developer experience problems, we can focus more time and effort building great products.
               </Heading>
             </Slide>
 
@@ -227,13 +227,10 @@ export default class Presentation extends React.Component {
 
             <Slide transition={['slide']} bgColor="black">
               <Image src={images.charlie} margin="0px auto 40px" height="500px"/>
-              <Text textColor='white' textSize='24px' italic >(Me talking at JS at a CSS conference)</Text>
             </Slide>
 
             <Slide transition={["fade"]} bgColor="white">
-              <Appear>
-                <Heading size={6} textAlign='left' italic margin='40px 0px'>What is Functional Programming?</Heading>
-              </Appear>
+              <Heading size={6} textAlign='left' italic margin='40px 0px'>What is Functional Programming?</Heading>
               <Appear>
                 <Text textAlign='left' textSize='24px' lineHeight={1.75}>
                   Functional Programming is a programming paradigm—a style of building the structure
@@ -351,7 +348,7 @@ export default class Presentation extends React.Component {
 
             <Slide transition={["fade"]} bgColor="white">
               <Heading size={6} lineHeight={1.25}>
-                Our CSS is "pure" if only the classes declared on the element apply styles to it.
+                CSS is "pure" (FP) if an element is only styled by its classes (not by globals).
               </Heading>
             </Slide>
 
@@ -363,7 +360,7 @@ export default class Presentation extends React.Component {
 
             <Slide transition={['slide']} bgColor="black">
               <Heading size={6} lineHeight={1.5} textColor='white' italic >
-                If CSS were immutable, we wouldn't be able override properties.
+                If CSS were truly immutable, we wouldn't override properties.
               </Heading>
             </Slide>
 
@@ -387,18 +384,18 @@ export default class Presentation extends React.Component {
               />
             </Slide>
 
+            <Slide transition={['slide']} bgColor="secondary">
+              <Heading size={6} lineHeight={1.5} textColor='white' italic >
+                The more properties your CSS declaration has, the less reusable it is.
+              </Heading>
+            </Slide>
+
             <Slide transition={['zoom','fade']} bgColor="primary">
                 <CodePane
                   lang="jsx"
                   source={require("raw!../examples/css-composition2.example")}
                   margin="20px auto"
                 />
-            </Slide>
-
-            <Slide transition={['slide']} bgColor="secondary">
-              <Heading size={6} lineHeight={1.5} textColor='white' italic >
-                The more properties your CSS declaration has, the less reusable it is.
-              </Heading>
             </Slide>
 
             <Slide transition={['slide']} bgColor="black">

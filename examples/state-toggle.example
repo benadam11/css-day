@@ -1,19 +1,18 @@
 
-import React from 'react';
+// Toggling Visibility with React & Tachyons
 
-export default class Toggle extends React.component {
+import React, {Component} from 'react';
 
+export default class Toggle extends Component {
   constructor(){
-    super()
+    super();
     this.state = { showArticle: true };
   }
-  
   render(){
     const { showArticle } = this.state;
     const classes = showArticle ? 'db' : 'dn';
     return (
       <div>
-        <button onClick={()=>{ this.setState({ showArticle: !showArticle})}} />
         <article className={`pa3 pa5-ns ${classes}`}>
           <h1>Title</h1>
           <p className="measure lh-copy">
@@ -21,8 +20,12 @@ export default class Toggle extends React.component {
             tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
           </p>
         </article>
+        <button
+          onClick={()=>{ this.setState({ showArticle: !showArticle})}}
+          style={{padding: '10px 40px', fontSize: '18px', borderRadius: '4px'}}>
+          Toggle
+        </button>
       </div>
-    )
+    );
   }
 }
-
