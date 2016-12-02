@@ -126,6 +126,12 @@ export default class Presentation extends React.Component {
               </List>
             </Slide>
 
+            <Slide transition={['slide']} bgColor="secondary">
+              <Heading size={6} lineHeight={1.5} textColor='white' italic >
+                If we can solve developer experience problems, we can focus more time and effort building great products.
+              </Heading>
+            </Slide>
+
             <Slide transition={['slide']} bgColor="black">
               <Heading size={6} textColor="white" margin='40px 10px'>
                 Problem #1 - Bad CSS is Complex:
@@ -483,33 +489,6 @@ export default class Presentation extends React.Component {
               </Appear>
             </Slide>
 
-            <Slide transition={['slide']} bgColor="black">
-              <Heading size={6} textColor='secondary' textAlign='left' italic >
-                Resources / Further Reading:
-              </Heading>
-              <List >
-                <ListItem textSize='28px' margin='20px 0px'>
-                  <Link href='https://www.infoq.com/presentations/Simple-Made-Easy' textColor='white'>Simple Made Easy by Rich Hickey</Link>
-                </ListItem>
-                <ListItem textSize='28px' margin='20px 0px'>
-                  <Link href='http://mrmrs.io/writing/2016/03/24/scalable-css/' textColor='white'>Scalable CSS</Link>
-                </ListItem>
-                <ListItem textSize='28px' margin='20px 0px'>
-                  <Link href='https://blog.colepeters.com/building-and-shipping-functional-css/' textColor='white'>Building & Shipping Functional CSS</Link>
-                </ListItem>
-                <ListItem textSize='28px' margin='20px 0px'>
-                  <Link href='https://github.com/tachyons-css/tachyons' textColor='white'>Tachyons</Link>
-                </ListItem>
-              </List>
-            </Slide>
-
-            <Slide transition={["spin", "slide"]} bgColor="tertiary">
-              <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-               Thank you!
-              </Heading>
-              <Text>(Say hi on twitter) - <Link href="http://www.twitter.com/benadam11" textColor='secondary'>@benadam11</Link></Text>
-            </Slide>
-
             <Slide transition={["fade"]} bgColor="white">
               <Heading size={6} textAlign='left' italic bold margin='40px 0px'>
                 Q: How do you do :nth-child selection, hovers and active states?
@@ -563,6 +542,34 @@ export default class Presentation extends React.Component {
             </Slide>
 
             <Slide> <Interactive/> </Slide>
+
+
+            <Slide transition={['slide']} bgColor="black">
+              <Heading size={6} textColor='secondary' textAlign='left' italic >
+                Resources / Further Reading:
+              </Heading>
+              <List >
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='https://www.infoq.com/presentations/Simple-Made-Easy' textColor='white'>Simple Made Easy by Rich Hickey</Link>
+                </ListItem>
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='http://mrmrs.io/writing/2016/03/24/scalable-css/' textColor='white'>Scalable CSS</Link>
+                </ListItem>
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='https://blog.colepeters.com/building-and-shipping-functional-css/' textColor='white'>Building & Shipping Functional CSS</Link>
+                </ListItem>
+                <ListItem textSize='28px' margin='20px 0px'>
+                  <Link href='https://github.com/tachyons-css/tachyons' textColor='white'>Tachyons</Link>
+                </ListItem>
+              </List>
+            </Slide>
+
+            <Slide transition={["spin", "slide"]} bgColor="tertiary">
+              <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
+               Thank you!
+              </Heading>
+              <Text>(Say hi on twitter) - <Link href="http://www.twitter.com/benadam11" textColor='secondary'>@benadam11</Link></Text>
+            </Slide>
 
           </Deck>
         </Spectacle>
