@@ -83,25 +83,36 @@ export default class Presentation extends React.Component {
               <Heading size={2} caps margin='40px 10px' textColor="secondary">
                 (Fun)ctional CSS
               </Heading>
-              <Text textColor='white'>Apply FP Principles => CSS</Text>
+              <Text textColor='white'>Applying FP Principles => CSS</Text>
             </Slide>
 
             <Slide transition={["fade"]} bgColor='white' >
-               <Appear>
-                 <Image src={images.godaddy} margin="0px auto 40px" height="300px"/>
-               </Appear>
-               <Text textSize='24px' bold italic >I'm Ben Adam</Text>
-               <Text textSize='24px' italic > (UX Engineer at GoDaddy)</Text>
+              <Image src={images.godaddy} margin="0px auto 40px" height="300px"/>
+              <Text textSize='24px' bold italic >I'm Ben Adam</Text>
+              <Text textSize='24px' italic > (UX Engineer at GoDaddy)</Text>
+            </Slide>
+
+            <Slide transition={['slide']} bgColor="secondary">
+              <Heading size={6} textColor='white' italic >
+                You will probably have one of 2 reactions to this talk
+              </Heading>
             </Slide>
 
             <Slide transition={['slide']} bgColor="black">
               <Image src={images.cage} margin="0px auto 40px" height="500px"/>
-              <Text textColor='white' textSize='24px' italic >How some of you feel about CSS.</Text>
             </Slide>
 
             <Slide transition={['slide']} bgColor="black">
               <Image src={images.shady} margin="0px auto 40px" height="500px"/>
-              <Text textColor='white' textSize='24px' italic>And the rest of you ...</Text>
+            </Slide>
+
+            <Slide transition={["fade"]} bgColor='white' >
+               <Heading size={6} margin=' 40px 0'bold italic> My goal: Nick Cage.</Heading>
+               <Appear>
+                 <Text textSize='24px' lineHeight={1.5} italic>
+                   But regardless, I hope this presentation challenges <br/> you to think critically about CSS.
+                 </Text>
+               </Appear>
             </Slide>
 
             <Slide transition={['slide']} bgColor="secondary">
@@ -128,7 +139,7 @@ export default class Presentation extends React.Component {
 
             <Slide transition={['slide']} bgColor="secondary">
               <Heading size={6} lineHeight={1.5} textColor='white' italic >
-                If we solve developer experience problems, we can focus more time and effort building great products.
+                If we solve dev experience problems, we can focus more time and effort building great products.
               </Heading>
             </Slide>
 
