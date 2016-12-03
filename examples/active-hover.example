@@ -1,0 +1,14 @@
+// How do I do active /hover / animation
+
+.button-hover:hover {
+  // put all your declarations for all of the properties you want to toggle here
+  // its ok to use a semantic class here (you are already duplicating properties)
+}
+
+.button-active:active {
+  // same
+}
+
+.animate-in {
+  // put your animation properties here
+}

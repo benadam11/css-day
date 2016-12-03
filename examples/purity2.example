@@ -3,9 +3,9 @@
 
 var a = 3;
 
-// Our function is using a global variable in addition to a local variable. 
+// Our function is using a global variable in addition to a local variable.
 
-const impureMultiply = (b) => a * b; 
+const impureMultiply = (b) => a * b;
 
 impureMultiply(3); // returns 9
 
@@ -15,12 +15,11 @@ a = 4;
 
 // Our function will return a new value
 
-impureMultiply(3) // returns 12
+impureMultiply(3); // returns 12
 
 
 // In contrast, multiply only operates on local scope
 
-const multiply = (a, b) => a * b
+const multiply = (a, b) => a * b;
 
-multiply(2, 3) // returns 6
-
+multiply(2, 3); // returns 6

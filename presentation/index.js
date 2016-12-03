@@ -139,7 +139,7 @@ export default class Presentation extends React.Component {
 
             <Slide transition={['slide']} bgColor="secondary">
               <Heading size={6} lineHeight={1.5} textColor='white' italic >
-                If we solve dev experience problems, we can focus more time and effort building great products.
+                If we reduce dev experience problems, we can focus more time and effort building great products.
               </Heading>
             </Slide>
 
@@ -178,8 +178,8 @@ export default class Presentation extends React.Component {
                 <Heading textAlign='left' size={6} textColor='secondary' italic >How does CSS become complex?</Heading>
                 <List textColor='white'>
                   <Appear><ListItem textSize='28px' margin='20px 0px'>Over time the codebase and / or team grows</ListItem></Appear>
-                  <Appear><ListItem textSize='28px' margin='20px 0px'>Developer isn't aware than someone already wrote a class</ListItem></Appear>
-                  <Appear><ListItem textSize='28px' margin='20px 0px'>The existing class doesn’t do exactly what they need it to</ListItem></Appear>
+                  <Appear><ListItem textSize='28px' margin='20px 0px'>Developers aren't always aware of existing classes</ListItem></Appear>
+                  <Appear><ListItem textSize='28px' margin='20px 0px'>Existing classes don’t do exactly what they need them to</ListItem></Appear>
                   <Appear><ListItem textSize='28px'>Solution: Add more CSS</ListItem></Appear>
               </List>
             </Slide>
@@ -397,7 +397,7 @@ export default class Presentation extends React.Component {
 
             <Slide transition={['slide']} bgColor="secondary">
               <Heading size={6} lineHeight={1.5} textColor='white' italic >
-                The more properties your CSS declaration has, the less reusable it is.
+                The more declarations your CSS selector has, the less reusable it is.
               </Heading>
             </Slide>
 
@@ -443,7 +443,7 @@ export default class Presentation extends React.Component {
               <List textColor='white'>
                 <Appear><ListItem textSize='28px' margin='20px 0px'>Harder to inspect styles</ListItem></Appear>
                 <Appear><ListItem textSize='28px' margin='20px 0px'>Class bloat in HMTL</ListItem></Appear>
-                <Appear><ListItem textSize='28px' margin='20px 0px'>Need components for consistency</ListItem></Appear>
+                <Appear><ListItem textSize='28px' margin='20px 0px'>Need components for design consistency</ListItem></Appear>
               </List>
             </Slide>
 
@@ -550,6 +550,14 @@ export default class Presentation extends React.Component {
             </Slide>
 
             <Slide> <Interactive/> </Slide>
+
+            <Slide transition={['zoom','fade']} bgColor="primary">
+              <CodePane
+                lang="jsx"
+                source={require("raw!../examples/active-hover.example")}
+                margin="20px auto"
+              />
+            </Slide>
 
 
             <Slide transition={['slide']} bgColor="black">
