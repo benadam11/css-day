@@ -1,0 +1,12 @@
+pre[class*="language-"] { 
+  background-color: #0D0D0D;
+}
+
+/*.token.tag {
+  color: #FF0053 !important;
+}*/
+
+blockquote > span {
+  border-color: white !important;
+  border-width: 2px !important;
+}

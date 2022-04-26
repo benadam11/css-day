@@ -1,0 +1,16 @@
+
+
+// Last Child Selector using React & Tachyons - http://tachyons.io/components/lists/border-spaced/index.html
+
+const cats = ['Mackeral Tabby', 'Burmese', 'Orange Tabby', 'Maine Coon', 'Siamese'];
+
+const List = () => (
+  <article className="pa3 pa5-ns">
+    <h1 className="f4 bold center mw6">Cats</h1>
+    <ul className="list pl0 ml0 center mw6 ba b--light-silver br2">
+      { cats.map((cat, i) =>  cats.length - 1 > i  ? 
+        <li key={i} className='ph3 pv3 bb b--light-silver'>{cat}</li> : <li key={i} className="ph3 pv3">{cat}</li>
+      )}
+    </ul>
+  </article>
+);

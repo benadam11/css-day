@@ -1,0 +1,12 @@
+
+/*
+  Composition takes the return value from the first function, and passes it to the second function. 
+*/
+
+const double = (x) => x + x;
+
+const square = (x) => x * x;
+
+// Compose these functions together
+
+console.log(double(square(2))); // 8

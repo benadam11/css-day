@@ -1,0 +1,19 @@
+
+import React from 'react';
+
+const Card = ({ children }) => {
+  return (
+    <div className='b-solid b-sz-xsmall b-c-red b-r-medium bg-c-white p-medium'>
+      { children }
+    </div>
+  );
+}
+
+// Now all of the nasty class bloat is contained inside our Card component
+
+const Section = () => {
+  return (
+    <Card>Hello World</Card>
+  );
+}
+

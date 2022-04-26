@@ -1,0 +1,11 @@
+
+// What color is the H2?
+
+<style>
+  .blue > h2 { color: blue; }
+  .red { color: red; }
+</style>
+
+<div class='blue'>
+  <h2 class='red'>Hello World</h2>
+</div>

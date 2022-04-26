@@ -1,0 +1,12 @@
+// Splitting classes into single purpose utility classes
+
+.b-solid { border-style: solid; }
+.b-sz-xsmall { border-size: 1px; }
+.b-c-red { border-color: red; }
+.b-r-medium { border-radius: 8px }
+.bg-c-white { background-color: white; }
+.p-medium { padding: 40px; }
+
+// Ew ... grosss ... wtf 
+<div class='b-solid b-sz-xsmall b-c-red b-r-medium bg-c-white p-medium'></div>
+
